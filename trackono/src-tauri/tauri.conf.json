@@ -9,6 +9,14 @@
     "beforeBuildCommand": "npm run build",
     "frontendDist": "../dist"
   },
+  "plugins": {
+    "screenshots": {},
+    "fs": {
+      "requireLiteralLeadingDot": false
+    }
+
+  },
+  
   "app": {
     "windows": [
       {

@@ -28,7 +28,7 @@ function App() {
   }, []);
   return (
     // <><h2>Hello</h2></>
-    <Router >
+    <Router basename="/">
 
       <Routes>
         <Route path="/" element={<DashboardLayout />}>

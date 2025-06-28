@@ -2,9 +2,25 @@
   "$schema": "../gen/schemas/desktop-schema.json",
   "identifier": "default",
   "description": "Capability for the main window",
-  "windows": ["main"],
+  "windows": [
+    "main"
+  ],
   "permissions": [
+    "screenshots:default",
     "core:default",
-    "opener:default"
+    "opener:default",
+    "fs:default",
+    {
+      "identifier": "fs:scope-appdata",
+      "allow": [
+        { "path": "$APPDATA/**/*" }
+      ]
+    },
+    {
+      "identifier": "fs:scope-desktop",
+      "allow": [
+        { "path": "$DESKTOP/**/*" }
+      ]
+    }
   ]
 }

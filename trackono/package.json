@@ -21,6 +21,7 @@
     "@tabler/icons-react": "^3.34.0",
     "@tailwindcss/vite": "^4.1.11",
     "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-fs": "^2.4.0",
     "@tauri-apps/plugin-opener": "^2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -30,7 +31,8 @@
     "react-router-dom": "^7.6.3",
     "styled-components": "^6.1.19",
     "tailwind-merge": "^3.3.1",
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "^4.1.11",
+    "tauri-plugin-screenshots-api": "^2.2.0"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^2",
