@@ -1,6 +1,6 @@
 import React from "react";
-import reactLogo from "./assets/react.svg";
-import { invoke } from "@tauri-apps/api/core";
+// import reactLogo from "./assets/react.svg";
+// import { invoke } from "@tauri-apps/api/core";
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import "./App.css";
 import DashboardLayout from "./dashboard/Layout";
@@ -27,7 +27,8 @@ function App() {
     };
   }, []);
   return (
-    <Router basename="/">
+    // <><h2>Hello</h2></>
+    <Router >
 
       <Routes>
         <Route path="/" element={<DashboardLayout />}>
@@ -36,6 +37,7 @@ function App() {
         </Route>
       </Routes>
     </Router>
+    
 
   );
 }

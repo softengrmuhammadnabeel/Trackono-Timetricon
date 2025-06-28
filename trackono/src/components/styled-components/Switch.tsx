@@ -6,11 +6,11 @@ import { Theme } from '@/enums/theme.enum';
 const Switch = () => {
   const { theme, setTheme } = useTheme(); // Get current theme and updater
   const [inputValue, setInputvalue] = React.useState<boolean>(true); // Tracks active theme
-  const [currentTheme, setCurrentTheme] = React.useState<Theme>(Theme.Light); // Tracks active theme
+  const [_, setCurrentTheme] = React.useState<Theme>(Theme.Light); // Tracks active theme
 
   // Function to decide theme values and update state
   const decideThemeValues = (systemTheme: Theme.Light | Theme.Dark) => {
-    const oppositeTheme = systemTheme === Theme.Light ? Theme.Dark : Theme.Light;
+    // const oppositeTheme = systemTheme === Theme.Light ? Theme.Dark : Theme.Light;
     setCurrentTheme(systemTheme);
     setTheme(systemTheme); // Update theme globally
   };

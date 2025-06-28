@@ -1,7 +1,7 @@
 // import { ChartAreaInteractive } from "@/app/(examples)/dashboard/components/chart-area-interactive"
 // import { DataTable } from "@/app/(examples)/dashboard/components/data-table"
 import { SectionCards } from "@/components/dashboard-components/SectionCards"
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 // import data from "@/app/(examples)/dashboard/data.json"
 
 export default function DashboardSecondPage() {
