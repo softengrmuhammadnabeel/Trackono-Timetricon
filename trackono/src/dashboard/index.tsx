@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -13,8 +13,8 @@ import {
   Coffee,
   Award,
   Brain,
-  Moon,
-  Sun,
+  // Moon,
+  // Sun,
   Timer,
   Calendar,
   GitBranch,
@@ -33,8 +33,8 @@ import useContinuousScreenshots from '@/hooks/use-continousScreenshots';
 export default function DashboardHomePage() {
   const [timerActive, setTimerActive] = useState(false);
   const [currentTime, setCurrentTime] = useState("00:00:00");
-  const [pomodoroCount, setPomodoroCount] = useState(3);
-  const [streak, setStreak] = useState(12);
+  const [pomodoroCount] = useState(3);
+  const [streak] = useState(12);
 
   
   useContinuousScreenshots(timerActive, 3000); // Pass timerActive to control the behavior

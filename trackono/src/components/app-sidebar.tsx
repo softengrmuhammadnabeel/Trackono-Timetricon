@@ -1,16 +1,16 @@
 import * as React from "react"
 import {
-  AudioWaveform,
-  BookOpen,
-  Bot,
-  Command,
-  Frame,
-  GalleryVerticalEnd,
-  Map,
-  PieChart,
-  Settings2,
-  SquareTerminal,
-} from "lucide-react"
+  Clock,
+  Hourglass,
+  BarChart3 as BarChart,
+  HelpCircle,
+  Settings as Gear,
+  Home as Dashboard,
+  Users,
+  TrendingUp,
+  Timer,
+  Sliders as Settings,
+} from "lucide-react";
 
 import { NavMain } from "@/components/nav-main"
 import { NavProjects } from "@/components/nav-projects"
@@ -24,155 +24,151 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar"
 
-// This is sample data.
+// Professional timer app data
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
+    name: "Nabeel",
+    email: "se.muhammadnabeel@gmail.com",
+    avatar: "/avatars/professional.jpg",
   },
   teams: [
     {
-      name: "Acme Inc",
-      logo: GalleryVerticalEnd,
+      name: "Nabeel Inc.",
+      logo: Clock,
       plan: "Enterprise",
     },
     {
-      name: "Acme Corp.",
-      logo: AudioWaveform,
-      plan: "Startup",
+      name: "Precision Timing Co.",
+      logo: Hourglass,
+      plan: "Business",
     },
     {
-      name: "Evil Corp.",
-      logo: Command,
-      plan: "Free",
+      name: "TimeTrackers",
+      logo: Clock,
+      plan: "Startup",
     },
   ],
   navMain: [
     {
-      title: "Timer",
+      title: "Dashboard",
       url: "/",
-      icon: SquareTerminal,
+      icon: Dashboard,
       isActive: true,
       items: [
         {
-          title: "Interface",
+          title: "Overview",
           url: "/",
         },
         {
-          title: "CLI",
-          url: "second",
+          title: "Analytics",
+          url: "/analytics",
         },
         {
-          title: "Timer Settings",
-          url: "#",
+          title: "Active Timers",
+          url: "/timers",
         },
       ],
     },
     {
-      title: "Playground",
-      url: "second",
-      icon: Settings2,
+      title: "Timer Setup",
+      url: "/setup",
+      icon: Settings,
       isActive: false,
       items: [
         {
-          title: "History",
-          url: "#",
+          title: "Create Timer",
+          url: "/setup/create",
         },
         {
-          title: "Starred",
-          url: "#",
+          title: "Saved Templates",
+          url: "/setup/templates",
         },
         {
-          title: "Settings",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Models",
-      url: "#",
-      icon: Bot,
-      items: [
-        {
-          title: "Genesis",
-          url: "#",
-        },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
+          title: "Timer Preferences",
+          url: "/setup/preferences",
         },
       ],
     },
     {
-      title: "Documentation",
-      url: "#",
-      icon: BookOpen,
+      title: "Reports",
+      url: "/reports",
+      icon: BarChart,
       items: [
         {
-          title: "Introduction",
-          url: "#",
+          title: "Daily Report",
+          url: "/reports/daily",
         },
         {
-          title: "Get Started",
-          url: "#",
+          title: "Weekly Report",
+          url: "/reports/weekly",
         },
         {
-          title: "Tutorials",
-          url: "#",
+          title: "Custom Report",
+          url: "/reports/custom",
+        },
+      ],
+    },
+    {
+      title: "Help",
+      url: "/help",
+      icon: HelpCircle,
+      items: [
+        {
+          title: "Getting Started",
+          url: "/help/start",
         },
         {
-          title: "Changelog",
-          url: "#",
+          title: "FAQs",
+          url: "/help/faqs",
+        },
+        {
+          title: "Support",
+          url: "/help/support",
         },
       ],
     },
     {
       title: "Settings",
-      url: "#",
-      icon: Settings2,
+      url: "/settings",
+      icon: Gear,
       items: [
         {
-          title: "General",
-          url: "#",
+          title: "Profile",
+          url: "/settings/profile",
         },
         {
-          title: "Team",
-          url: "#",
+          title: "Notifications",
+          url: "/settings/notifications",
         },
         {
-          title: "Billing",
-          url: "#",
+          title: "Subscription",
+          url: "/settings/subscription",
         },
         {
-          title: "Limits",
-          url: "#",
+          title: "Privacy",
+          url: "/settings/privacy",
         },
       ],
     },
   ],
   projects: [
     {
-      name: "Design Engineering",
-      url: "#",
-      icon: Frame,
+      name: "Time Optimization",
+      url: "/projects/optimization",
+      icon: Timer,
     },
     {
-      name: "Sales & Marketing",
-      url: "#",
-      icon: PieChart,
+      name: "Team Collaboration",
+      url: "/projects/collaboration",
+      icon: Users,
     },
     {
-      name: "Travel",
-      url: "#",
-      icon: Map,
+      name: "Productivity Insights",
+      url: "/projects/insights",
+      icon: TrendingUp,
     },
   ],
-}
+};
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (

@@ -21,6 +21,12 @@
       "allow": [
         { "path": "$DESKTOP/**/*" }
       ]
+    },
+    {
+      "identifier": "fs:allow-app-write",
+      "allow": [
+        { "path": "$DOCUMENT/**/*" }
+      ]
     }
   ]
 }
