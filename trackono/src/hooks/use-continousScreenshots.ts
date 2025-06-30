@@ -1,3 +1,4 @@
+import { uploadToSupabase } from "@/utils/uploadToSupabase";
 import { BaseDirectory, exists, mkdir, readFile, writeFile } from "@tauri-apps/plugin-fs";
 // import { readBinaryFile } from "@tauri-apps/plugin-fs";
 
@@ -39,7 +40,8 @@ function useContinuousScreenshots(isActive: boolean, interval = 5000) {
             await mkdir(customDir, { baseDir: BaseDirectory.Document });
           }
           await writeFile(customPath, binaryData, { baseDir: BaseDirectory.Document });
-
+          const FileToUpload = new File([defaultPath], customFileName, { type: "image/png" });
+          await uploadToSupabase(FileToUpload, "trackono-bucket")
           console.log(`Screenshot saved at: ${customPath}`);
           // const binaryData = await readFile(defaultPath, { baseDir: BaseDirectory.Resource });
           // console.log("-----------------", binaryData);
